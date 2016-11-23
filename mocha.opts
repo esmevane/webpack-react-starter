@@ -1,0 +1,7 @@
+--colors
+--require babel-core/register
+--require test-helper.js
+--growl
+--reporter spec
+--recursive
+lib/**/*.spec.js
