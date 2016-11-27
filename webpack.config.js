@@ -4,7 +4,7 @@ var webpack = require("webpack")
 var path = require("path")
 var meta = { port: 9002 }
 var publicPath
-var entry = []
+var entry = ["babel-polyfill"]
 var plugins = []
 var cssNamePattern
 
