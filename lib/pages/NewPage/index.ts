@@ -1,5 +1,3 @@
-import { Page } from "pages/Page";
-
 export default class NewPage implements Page {
   path() {
     return "/new";

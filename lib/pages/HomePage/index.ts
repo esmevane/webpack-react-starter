@@ -1,4 +1,3 @@
-import { Page } from "pages/Page";
 import NewPage from "pages/NewPage";
 
 export default class HomePage implements Page {

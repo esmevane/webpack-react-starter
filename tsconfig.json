@@ -5,13 +5,18 @@
   "buildOnSave": false,
   "compileOnSave": false,
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
+    "module": "es6",
+    "moduleResolution": "node",
     "baseUrl": "lib",
-    "jsx": "react",
-    "target": "es5"
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "jsx": "preserve",
+    "target": "es6",
+    "pretty": true
   },
   "disableCompileOnSave": true,
   "filesGlob" : [
+    "typings/**/*.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "!node_modules/**",
