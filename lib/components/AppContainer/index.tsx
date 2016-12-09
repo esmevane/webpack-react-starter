@@ -6,7 +6,7 @@ import HomeContent from "components/HomeContent";
 
 const styles: any = require("./styles.module.css");
 
-interface AppContainerProps {
+export interface AppContainerProps {
   header: Component<{}, {}>;
   sidebar: Component<{}, {}>;
   content: Component<{}, {}>;

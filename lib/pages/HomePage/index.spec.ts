@@ -1,4 +1,4 @@
-import HomePage from "./index";
+import HomePage from "pages/HomePage";
 import NewPage from "pages/NewPage";
 import { expect } from "chai";
 
@@ -11,17 +11,14 @@ describe("HomePage", () => {
     });
   });
 
-  // describe("#toRoute", () => {
-  //   let wasCalledWith;
-  //
-  //   const routable = page.toRoute();
-  //   const callback = (error, result) => wasCalledWith = result;
-  //   const expectation = [new NewPage().toRoute()];
-  //
-  //   it("supplies .getComponent with the AppContainer", () => {
-  //     routable.getComponent({}, callback);
-  //     expect(wasCalledWith).to.eql(expectation);
-  //   });
-  // });
-  //
+  describe("#toRoute", () => {
+    it("supplies path, getComponent and getChildRoutes", () => {
+      expect(page.toRoute()).to.have.keys(
+        "path",
+        "getComponent",
+        "getChildRoutes"
+      );
+    });
+  });
+
 });
