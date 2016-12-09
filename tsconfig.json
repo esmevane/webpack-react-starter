@@ -1,0 +1,21 @@
+{
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "lib",
+    "jsx": "react",
+    "target": "es5"
+  },
+  "disableCompileOnSave": true,
+  "filesGlob" : [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**",
+    "!**/*.spec.ts",
+    "!**/*.spec.tsx"
+  ]
+}

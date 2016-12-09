@@ -1,11 +1,12 @@
 /* eslint no-undef: "off" */
-import DevServer from "webpack-dev-server"
-import proxy from "proxy-middleware"
-import webpack from "webpack"
-import url from "url"
-import path from "path"
-import express from "express"
-import config from "./webpack.config"
+
+const DevServer = require("webpack-dev-server")
+const proxy = require("proxy-middleware")
+const webpack = require("webpack")
+const url = require("url")
+const path = require("path")
+const express = require("express")
+const config = require("./webpack.config")
 
 const devHost = `http://localhost:${config.meta.port}/assets`
 const appPath = path.resolve(path.join(__dirname, "public"))

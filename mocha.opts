@@ -1,7 +1,7 @@
 --colors
---require babel-core/register
---require test-helper.js
+--require ts-node/register
 --growl
 --reporter spec
 --recursive
-lib/**/*.spec.js
+lib/**/*.spec.ts
+lib/**/*.spec.tsx

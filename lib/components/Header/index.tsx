@@ -1,9 +1,10 @@
-import React from "react"
-import styles from "./styles.module.css"
+import * as React from "react";
+
+const styles: any = require("./styles.module.css");
 
 const Header = () =>
   <div className={ styles.container }>
     <h1>A basic webpack + react kit with code splitting</h1>
-  </div>
+  </div>;
 
-export default Header
+export default Header;

@@ -3,9 +3,10 @@
 var webpack = require("webpack")
 var path = require("path")
 var meta = { port: 9002 }
-var publicPath
-var entry = []
 var plugins = []
+var entry = []
+
+var publicPath
 var cssNamePattern
 
 if (process.env.NODE_ENV !== "production") {
@@ -38,7 +39,7 @@ module.exports = {
 
   resolve: {
     modulesDirectories: [ "node_modules", "lib" ],
-    extensions: [ "", ".js", ".css" ]
+    extensions: [ "", ".ts", ".tsx", ".js", ".css" ]
   },
 
   postcss: [
@@ -57,9 +58,9 @@ module.exports = {
         loader: `style!css?modules&importLoaders=1&${cssNamePattern}!postcss`
       },
       {
-        test: /\.(js)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: "babel"
+        loader: "ts"
       },
       {
         test: /\.html$/,
