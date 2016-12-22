@@ -28,6 +28,7 @@
     "@types/mocha": "^2.2.33",
     "@types/react": "^0.14.54",
     "@types/react-dom": "^0.14.19",
+    "@types/react-redux": "^4.4.35",
     "@types/react-router": "^2.0.41",
     "@types/webpack": "^2.0.0",
     "autoprefixer": "^6.5.3",

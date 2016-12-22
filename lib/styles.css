@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 2em;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 18px;
+
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.9);
+}

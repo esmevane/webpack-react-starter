@@ -9,18 +9,22 @@
     "moduleResolution": "node",
     "baseUrl": "lib",
     "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true,
     "sourceMap": true,
     "jsx": "preserve",
     "target": "es6",
     "pretty": true
   },
   "disableCompileOnSave": true,
-  "filesGlob" : [
-    "typings/**/*.d.ts",
+  "exclude": [
+    "./node_modules"
+  ],
+  "filesGlob": [
+    "!**/*.spec.ts",
+    "!**/*.spec.tsx",
     "**/*.ts",
     "**/*.tsx",
-    "!node_modules/**",
-    "!**/*.spec.ts",
-    "!**/*.spec.tsx"
+    "lib/index.ts",
+    "typings/*.d.ts"
   ]
 }
