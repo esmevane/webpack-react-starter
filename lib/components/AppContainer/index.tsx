@@ -6,24 +6,17 @@ import HomeContent from "components/HomeContent";
 
 const styles: any = require("./styles.module.css");
 
-export default class AppContainer extends Component<AppContainerProps, {}> {
+const AppContainer = ({ header, sidebar, content }) =>
+  <div className={ styles.container }>
+    <header className={ styles.header }>
+      { header || <Header /> }
+    </header>
+    <aside className={ styles.sidebar }>
+      { sidebar || <Sidebar /> }
+    </aside>
+    <section className={ styles.content }>
+      { content || <HomeContent /> }
+    </section>
+  </div>;
 
-  render() {
-    const { header, sidebar, content } = this.props;
-
-    return(
-      <div className={ styles.container }>
-        <header className={ styles.header }>
-          { header || <Header /> }
-        </header>
-        <aside className={ styles.sidebar }>
-          { sidebar || <Sidebar /> }
-        </aside>
-        <section className={ styles.content }>
-          { content || <HomeContent /> }
-        </section>
-      </div>
-    );
-  }
-
-}
+export default AppContainer ;

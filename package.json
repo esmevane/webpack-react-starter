@@ -4,7 +4,7 @@
   "description": "JSON API client, with customizable marshal objects.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server",
     "tdd": "NODE_ENV=test ./node_modules/karma/bin/karma start karma.conf.js",
     "test": "npm run tdd -- --single-run"
   },

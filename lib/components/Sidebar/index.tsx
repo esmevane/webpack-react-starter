@@ -1,6 +1,6 @@
 import * as React from "react";
-import * as pages from "pages";
 import { Link } from "react-router";
+import * as pages from "pages";
 
 const styles: any = require("./styles.module.css");
 

@@ -1,4 +1,4 @@
-export default class NewPage implements Page {
+export default class NewPage {
   path() {
     return "/new";
   }

@@ -5,15 +5,16 @@
   "buildOnSave": false,
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "lib",
+    "allowJs": true,
+    "jsx": "preserve",
     "module": "es6",
     "moduleResolution": "node",
-    "baseUrl": "lib",
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
+    "pretty": true,
     "sourceMap": true,
-    "jsx": "preserve",
-    "target": "es6",
-    "pretty": true
+    "strictNullChecks": true,
+    "target": "es6"
   },
   "disableCompileOnSave": true,
   "exclude": [

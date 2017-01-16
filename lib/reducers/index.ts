@@ -1,15 +1,19 @@
 import { combineReducers } from "redux";
-import { TOGGLE } from "actions";
 
-const active = (initialState: boolean = true, action) => {
-  switch (action.type) {
-    case TOGGLE:
-      return !initialState;
-    default:
-      return initialState;
-  }
+declare var require: any;
+
+const createReducers = () => {
+  const context = require.context("components", true, /reducers\.(ts|js)/);
+  const toReducer = (reducers, key) => (
+    {
+      ...reducers,
+      ...(context(key).default)
+    }
+  );
+
+  const reducers = context.keys().reduce(toReducer, {});
+
+  return combineReducers(reducers);
 };
-
-const createReducers = () => combineReducers({ active });
 
 export { createReducers };

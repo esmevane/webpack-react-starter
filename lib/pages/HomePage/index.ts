@@ -1,6 +1,6 @@
 import NewPage from "pages/NewPage";
 
-export default class HomePage implements Page {
+export default class HomePage {
   path() {
     return "/";
   }
