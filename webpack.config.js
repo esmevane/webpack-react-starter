@@ -43,7 +43,8 @@ module.exports = {
   },
 
   postcss: [
-    require("postcss-animation")({})
+    require("postcss-animation")({}),
+    require("postcss-modules-values")
   ],
 
   module: {

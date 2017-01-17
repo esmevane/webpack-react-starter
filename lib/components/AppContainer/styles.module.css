@@ -1,4 +1,36 @@
-.container {}
-.header {}
-.content {}
-.sidebar {}
+@value colors: "styles/colors";
+@value blue, white, shadow from colors;
+
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  min-height: 3em;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1em;
+
+  background-color: blue;
+  color: white;
+  box-shadow: 0 0 0.5em 0 shadow;
+}
+
+.header, .content, .sidebar {
+  padding: 1em;
+}
+
+.content {
+  width: 80%;
+}
+
+.sidebar {
+  width: 20%;
+}

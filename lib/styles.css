@@ -1,12 +1,18 @@
+@value colors: "styles/colors";
+@value offwhite, black from colors;
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 2em;
+  margin: 0;
+  padding: 0;
+
   font-family: "Helvetica Neue", sans-serif;
   font-size: 18px;
 
-  background-color: #fafafa;
-  color: rgba(0, 0, 0, 0.9);
+  background-color: offwhite;
+  color: black;
+  transition: 0.3s ease-in;
 }

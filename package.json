@@ -63,6 +63,7 @@
     "normalizr": "^2.2.1",
     "postcss-animation": "0.0.11",
     "postcss-loader": "^0.10.0",
+    "postcss-modules-values": "^1.2.2",
     "proxy-middleware": "^0.15.0",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",

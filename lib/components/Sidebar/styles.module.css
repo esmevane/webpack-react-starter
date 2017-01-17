@@ -1,1 +1,8 @@
-.container {}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  margin-bottom: 0.5em;
+}
