@@ -14,18 +14,18 @@ if (process.env.NODE_ENV !== "production") {
   entry.push("webpack/hot/only-dev-server")
 
   plugins.push(new webpack.HotModuleReplacementPlugin())
+  plugins.push(new webpack.NamedModulesPlugin())
 
   publicPath = `http://localhost:${meta.port}/assets/`
-  cssNamePattern = "localIdentName=[path][name]-[local]"
+  cssNamePattern = "[path][name]-[local]"
 } else {
   publicPath = "assets/"
-  cssNamePattern = "localIdentName=[hash:base64:5]"
+  cssNamePattern = "[hash:base64:5]"
 }
 
 entry.push("./lib/index.js")
 
 module.exports = {
-  meta,
   plugins,
   entry,
 
@@ -38,43 +38,67 @@ module.exports = {
   },
 
   resolve: {
-    modulesDirectories: [ "node_modules", "lib" ],
-    extensions: [ "", ".js", ".css" ]
+    modules: [
+      "node_modules",
+      path.resolve(__dirname, "lib")
+    ],
+    extensions: [ ".js", ".json", ".css" ]
   },
 
-  postcss: [
-    require("postcss-animation")({}),
-    require("postcss-modules-values")
-  ],
-
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(css)$/,
         exclude: /\.module\./,
-        loader: "style!css!postcss"
+        use: [ "style-loader", "css-loader", "postcss-loader" ]
       },
       {
         test: /\.module\.(css)$/,
-        loader: `style!css?modules&importLoaders=1&${cssNamePattern}!postcss`
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: cssNamePattern
+            }
+          },
+          "postcss-loader"
+        ]
       },
       {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: "babel"
+        test: /\.(js)$/,
+        exclude: "node_modules",
+        use: [ "babel-loader" ]
       },
       {
         test: /\.html$/,
-        exclude: /node_modules/,
-        loader: "file?name=[name].[ext]"
+        exclude: "node_modules",
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]"
+            }
+          }
+        ]
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url?limit=10000&minetype=application/font-woff"
+        loader: [
+          {
+            loader: "url-loader",
+            options: {
+              limit: 10000,
+              minetype: "application/font-woff"
+            }
+          }
+        ]
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file"
+        use: [ "file-loader" ]
       }
     ]
   }

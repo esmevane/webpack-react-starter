@@ -2,14 +2,13 @@ const DevServer = require("webpack-dev-server")
 const path = require("path")
 const webpack = require("webpack")
 const createApp = require("./createApp")
+const config = require("../webpack.config")
 
-const createDev = (config) => {
-  const app = createApp(config)
+const createDev = (port) => {
+  const app = createApp(port)
   const compiler = webpack(config)
 
   const devConfig = {
-    cached: false,
-    cachedAssets: false,
     contentBase: path.resolve(app.path),
     historyApiFallback: true,
     hot: true,
@@ -21,7 +20,7 @@ const createDev = (config) => {
   const listen = () => {
     const devServer = new DevServer(compiler, devConfig)
 
-    devServer.listen(config.meta.port, "localhost", () => {})
+    devServer.listen(port, "localhost", () => {})
   }
 
   return { listen }

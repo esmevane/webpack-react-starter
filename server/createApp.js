@@ -7,8 +7,7 @@ const favicon = require("serve-favicon")
 const proxy = require("proxy-middleware")
 const createApi = require("./createApi")
 
-const createApp = (config) => {
-  const port = config.meta.port
+const createApp = (port) => {
   const appPath = path.resolve(path.join(__dirname, "..", "public"))
   const devHost = `http://localhost:${port}/assets`
 
