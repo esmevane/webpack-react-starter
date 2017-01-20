@@ -39,7 +39,7 @@ module.exports = {
 
   resolve: {
     modulesDirectories: [ "node_modules", "lib" ],
-    extensions: [ "", ".ts", ".tsx", ".js", ".css" ]
+    extensions: [ "", ".js", ".css" ]
   },
 
   postcss: [
@@ -57,11 +57,6 @@ module.exports = {
       {
         test: /\.module\.(css)$/,
         loader: `style!css?modules&importLoaders=1&${cssNamePattern}!postcss`
-      },
-      {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        loader: "babel!ts"
       },
       {
         test: /\.(js|jsx)$/,

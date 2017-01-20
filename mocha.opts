@@ -5,3 +5,5 @@
 --recursive
 lib/**/*.spec.ts
 lib/**/*.spec.tsx
+lib/**/*.spec.js
+src/**/*.spec.js

@@ -18,10 +18,11 @@ const createDev = (config) => {
     stats: { colors: true, chunkModules: false }
   }
 
-  const devServer = new DevServer(compiler, devConfig)
+  const listen = () => {
+    const devServer = new DevServer(compiler, devConfig)
 
-  const listen = () =>
     devServer.listen(config.meta.port, "localhost", () => {})
+  }
 
   return { listen }
 }

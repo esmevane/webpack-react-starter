@@ -1,3 +1,14 @@
+.grunt
+.lock-wscript
+*.log
+*.pid
+*.seed
+build/Release
+coverage
+data/
+lib-cov
+logs
 node_modules/
-tmp/
 npm-debug.log
+pids
+tmp/

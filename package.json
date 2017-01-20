@@ -1,13 +1,13 @@
 {
   "name": "webpack-react-starter",
-  "version": "0.0.1",
   "description": "JSON API client, with customizable marshal objects.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server",
-    "tdd": "NODE_ENV=test ./node_modules/karma/bin/karma start karma.conf.js",
-    "test": "npm run tdd -- --single-run"
+  "version": "0.0.0",
+  "homepage": "https://github.com/esmevane/webpack-react-starter#readme",
+  "contributors": [],
+  "engines": {
+    "node": ">= 0.12.0"
   },
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/esmevane/webpack-react-starter.git"
@@ -22,15 +22,35 @@
   "bugs": {
     "url": "https://github.com/esmevane/webpack-react-starter/issues"
   },
-  "homepage": "https://github.com/esmevane/webpack-react-starter#readme",
+  "scripts": {
+    "start": "node server",
+    "tdd": "NODE_ENV=test ./node_modules/karma/bin/karma start karma.conf.js",
+    "test": "npm run tdd -- --single-run",
+    "migration:create": "sequelize migration:create",
+    "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo": "sequelize db:migrate:undo"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "feathers": "^2.0.3",
+    "feathers-authentication": "^0.7.12",
+    "feathers-configuration": "^0.2.3",
+    "feathers-errors": "^2.5.0",
+    "feathers-hooks": "^1.7.1",
+    "feathers-rest": "^1.6.0",
+    "feathers-sequelize": "^1.4.0",
+    "feathers-socketio": "^1.4.2",
+    "passport": "^0.3.2",
+    "proxy-middleware": "^0.15.0",
+    "sequelize": "^3.29.0",
+    "sequelize-cli": "^2.5.1",
+    "serve-favicon": "^2.3.2",
+    "sqlite3": "^3.1.8",
+    "winston": "^2.3.0"
+  },
   "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/mocha": "^2.2.33",
-    "@types/react": "^0.14.54",
-    "@types/react-dom": "^0.14.19",
-    "@types/react-redux": "^4.4.35",
-    "@types/react-router": "^2.0.41",
-    "@types/webpack": "^2.0.0",
     "autoprefixer": "^6.5.3",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
@@ -64,7 +84,6 @@
     "postcss-animation": "0.0.11",
     "postcss-loader": "^0.10.0",
     "postcss-modules-values": "^1.2.2",
-    "proxy-middleware": "^0.15.0",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-addons-test-utils": "^15.4.1",
@@ -74,12 +93,9 @@
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
     "redux-saga": "^0.13.0",
+    "request": "^2.79.0",
     "reselect": "^2.5.4",
     "style-loader": "^0.13.1",
-    "ts-loader": "^1.3.0",
-    "ts-node": "^1.7.0",
-    "tslint": "^4.0.2",
-    "typescript": "^2.1.4",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"

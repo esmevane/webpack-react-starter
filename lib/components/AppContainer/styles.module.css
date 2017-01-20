@@ -18,7 +18,9 @@
   justify-content: center;
   margin-bottom: 1em;
 
-  background-color: blue;
+  background:
+    linear-gradient(145deg, transparent 0%, shadow 140%),
+    blue;
   color: white;
   box-shadow: 0 0 0.5em 0 shadow;
 }

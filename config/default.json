@@ -1,0 +1,12 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "sqlite": "../data/app.sqlite",
+  "public": "../public/",
+  "auth": {
+    "token": {
+      "secret": "lrV5BBPvGjOizhE0iDDRzcqLHe61rG+Ra9NHaHSH4yvJxf6pplDpGvZX9izMsKbOJFht+jMu3NpcRIcZp9FXMw=="
+    },
+    "local": {}
+  }
+}
