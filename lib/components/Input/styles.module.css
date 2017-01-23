@@ -1,0 +1,21 @@
+@value colors: "styles/colors";
+@value flashblue, shadow from colors;
+
+.container {
+  outline: none;
+  background-color: rgba(0, 0, 0, 0.03);
+  border: none;
+
+  padding: 1em;
+  min-width: 10em;
+  margin-right: 1em;
+
+  font-size: 0.75em;
+
+  border-bottom: 1px solid flashblue;
+  transition: 0.3s ease-in-out;
+}
+
+.container:focus {
+  background-color: rgba(0, 0, 0, 0);
+}

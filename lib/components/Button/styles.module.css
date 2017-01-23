@@ -1,0 +1,24 @@
+@value colors: "styles/colors";
+@value blue, flashblue, hoverblue, shadow, purpleOverlay from colors;
+
+.container {
+  outline: none;
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  padding: 1em;
+  min-width: 10em;
+  color: white;
+
+  font-size: 0.75em;
+  font-weight: lighter;
+
+  background: flashblue;
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  animation: pulse 1s;
+}

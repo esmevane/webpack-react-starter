@@ -1,5 +1,12 @@
 @value blue: rgba(20, 102, 135, 0.8);
+@value whiteglass: rgba(255, 255, 255, 0.1);
 @value white: rgba(255, 255, 255, 0.95);
 @value shadow: rgba(22, 20, 28, 0.45);
 @value offwhite: #fefefe;
 @value black: rgba(23, 20, 28, 0.8);
+@value purple: rgb(102, 51, 153);
+@value flashblue: rgba(20, 102, 185, 0.8);
+@value hoverblue: rgba(20, 102, 155, 0.8);
+
+@value purpleOverlay:
+  linear-gradient(145deg, transparent 0%, purple 140%);

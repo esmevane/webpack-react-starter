@@ -1,5 +1,5 @@
 @value colors: "styles/colors";
-@value blue, white, shadow from colors;
+@value blue, white, shadow, purpleOverlay from colors;
 
 .container {
   width: 100%;
@@ -18,9 +18,7 @@
   justify-content: center;
   margin-bottom: 1em;
 
-  background:
-    linear-gradient(145deg, transparent 0%, shadow 140%),
-    blue;
+  background: purpleOverlay, blue;
   color: white;
   box-shadow: 0 0 0.5em 0 shadow;
 }

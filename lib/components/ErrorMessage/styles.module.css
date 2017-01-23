@@ -1,0 +1,15 @@
+@value colors: "styles/colors";
+@value white from colors;
+
+.container {
+  width: 98%;
+  min-height: 1.5em;
+}
+
+.enter, .appear { animation: shake 0.3s }
+.leave { animation: flipOutX 1s }
+
+.message {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(200, 20, 84, 0.7);
+}

@@ -51,7 +51,7 @@
     "winston": "^2.3.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.3",
+    "autoprefixer": "^6.7.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-loader": "^6.2.10",
@@ -61,7 +61,7 @@
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.16.0",
     "chai": "^3.5.0",
-    "css-loader": "^0.26.1",
+    "css-loader": "^0.23.1",
     "enzyme": "^2.6.0",
     "eslint": "^3.10.2",
     "eslint-plugin-react": "^6.7.1",
@@ -80,7 +80,6 @@
     "karma-webpack": "^1.8.0",
     "lodash": "^4.17.2",
     "mocha": "^3.1.2",
-    "normalizr": "^2.2.1",
     "postcss-animation": "0.0.11",
     "postcss-loader": "^0.10.0",
     "postcss-modules-values": "^1.2.2",
@@ -94,10 +93,9 @@
     "redux": "^3.6.0",
     "redux-saga": "^0.13.0",
     "request": "^2.79.0",
-    "reselect": "^2.5.4",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.13.1"
   }
 }

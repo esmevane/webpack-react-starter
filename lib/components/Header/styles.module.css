@@ -1,1 +1,16 @@
-.container {}
+@value colors: "styles/colors";
+@value white, whiteglass, purpleOverlay from colors;
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  color: whiteglass;
+  font-size: 2.2em;
+  -webkit-text-stroke: 2px white;
+}
