@@ -1,36 +1,47 @@
-@value colors: "styles/colors";
-@value blue, white, shadow, purpleOverlay from colors;
+@value rose, teal, darkPurple, nightBloom from "styles/colors";
 
 .container {
+  min-height: 100%;
   width: 100%;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+
+  background: darkPurple;
 }
 
 .header {
+  padding: 1em;
+  height: 250px;
   width: 100%;
-  min-height: 3em;
+  z-index: 1;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 1em;
 
-  background: purpleOverlay, blue;
-  color: white;
-  box-shadow: 0 0 0.5em 0 shadow;
-}
-
-.header, .content, .sidebar {
-  padding: 1em;
+  background: nightBloom;
+  border-bottom: 3px solid rgba(0,0,0,0.35);
+  box-shadow: 0 8px 2.5em -16px teal, inset 0 -16px 2.5em -24px rose;
 }
 
 .content {
-  width: 80%;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .sidebar {
+  padding: 1em;
+  height: 100%;
   width: 20%;
+}
+
+.main {
+  padding: 1em;
+  width: 80%;
+  color: teal;
+  font-weight: lighter;
 }

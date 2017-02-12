@@ -1,5 +1,5 @@
 @value colors: "styles/colors";
-@value blue, flashblue, hoverblue, shadow, purpleOverlay from colors;
+@value rose, roseHover from colors;
 
 .container {
   outline: none;
@@ -9,16 +9,18 @@
   cursor: pointer;
 
   padding: 1em;
-  min-width: 10em;
+  min-width: 5em;
+  max-width: 10em;
   color: white;
 
   font-size: 0.75em;
   font-weight: lighter;
 
-  background: flashblue;
+  background: rose;
   transition: 0.3s ease-in-out;
 }
 
 .container:hover {
   animation: pulse 1s;
+  background: roseHover;
 }

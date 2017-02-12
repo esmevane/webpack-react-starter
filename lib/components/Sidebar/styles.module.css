@@ -1,8 +1,23 @@
+@value rose, roseHover, teal from "styles/colors";
+
 .container {
   display: flex;
   flex-direction: column;
 }
 
 .link {
+  color: rose;
   margin-bottom: 0.5em;
+  text-decoration: none;
+  transition: 0.3s all ease-in;
+}
+
+.link:hover {
+  color: roseHover;
+}
+
+.link:before {
+  content: "";
+  font-family: FontAwesome;
+  margin-right: 0.5em;
 }

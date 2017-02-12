@@ -1,5 +1,5 @@
 @value colors: "styles/colors";
-@value white, whiteglass, purpleOverlay from colors;
+@value rose from colors;
 
 .container {
   align-items: center;
@@ -10,7 +10,11 @@
 }
 
 .title {
-  color: whiteglass;
+  color: rose;
   font-size: 2.2em;
-  -webkit-text-stroke: 2px white;
+}
+
+.headline {
+  margin-left: 0.35em;
+  font-weight: 300;
 }

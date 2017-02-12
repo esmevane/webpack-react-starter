@@ -10,3 +10,20 @@
 
 @value purpleOverlay:
   linear-gradient(145deg, transparent 0%, purple 140%);
+
+@value spotlightOverlay:
+  radial-gradient(50% 121%, rgba(255,255,255,0.74) 32%, #BB9696 100%);
+
+/* Used these more recently; favor them! */
+
+@value shallowPurple: rgba(72, 39, 138, 1);
+@value deepPurple: rgba(61, 34, 95, 1);
+@value darkPurple: rgba(44, 22, 72, 1);
+
+@value rose: rgba(255, 0, 114, 0.5);
+@value roseHover: rgba(255, 0, 114, 0.8);
+
+@value teal: rgba(0, 243, 255, 0.5);
+
+@value nightBloom:
+  radial-gradient(50% 165%, shallowPurple 30%, deepPurple 100%);

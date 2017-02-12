@@ -1,1 +1,40 @@
-.container {}
+@value colors: "styles/colors";
+@value blue, flashblue, hoverblue, shadow, purpleOverlay from colors;
+
+.container {
+  cursor: pointer;
+  padding: 1em;
+  margin: 1em 0;
+
+  width: 15em;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  background: white;
+  box-shadow: 0 0 1em -0.1em rgba(0,0,0,0.2);
+}
+
+.container, .title, .content {
+  transition: 0.3s ease-in-out;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+
+  border-bottom: 1px solid flashblue;
+  font-size: 1.2em;
+}
+
+.content {
+  width: 30%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
